@@ -41,7 +41,7 @@
             <div class="content">
                 <div class="title">Catshow international</div>
                 <div class="quote">{{ Inspiring::quote() }}</div>
-                <div class="quote"><a class="btn btn-default" href="#" role="button">Get a ticket</a></div>
+                <div class="quote"><a class="btn btn-default" href="/event" role="button">Get a ticket</a></div>
             </div>
         </div>
     </body>

@@ -17,6 +17,9 @@
                 font-weight: 100;
                 font-family: 'Lato';
             }
+            a:link, a:visited, a:hover, a:active {
+                color: #B0BEC5;
+            }
 
             .container {
                 text-align: center;
@@ -79,47 +82,47 @@
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
-@media (min-width: 768px) {
-  .navbar-default {
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-  .navbar-default .navbar-header .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .navbar-default .navbar-header .navbar-brand:hover,
-  .navbar-default .navbar-header .navbar-brand:focus {
-    color: white;
-  }
-  .navbar-default .nav > li > a,
-  .navbar-default .nav > li > a:focus {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .navbar-default .nav > li > a:hover,
-  .navbar-default .nav > li > a:focus:hover {
-    color: white;
-  }
-  .navbar-default.affix {
-    background-color: white;
-    border-color: rgba(34, 34, 34, 0.05);
-  }
-  .navbar-default.affix .navbar-header .navbar-brand {
-    color: #F05F40;
-    font-size: 14px;
-  }
-  .navbar-default.affix .navbar-header .navbar-brand:hover,
-  .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #eb3812;
-  }
-  .navbar-default.affix .nav > li > a,
-  .navbar-default.affix .nav > li > a:focus {
-    color: #222222;
-  }
-  .navbar-default.affix .nav > li > a:hover,
-  .navbar-default.affix .nav > li > a:focus:hover {
-    color: #F05F40;
-  }
-}
+        @media (min-width: 768px) {
+        .navbar-default {
+            background-color: #9FA8DA;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        .navbar-default .navbar-header .navbar-brand {
+            color: white;
+        }
+        .navbar-default .navbar-header .navbar-brand:hover,
+        .navbar-default .navbar-header .navbar-brand:focus {
+            color: #B0BEC5;
+        }
+        .navbar-default .nav > li > a,
+        .navbar-default .nav > li > a:focus {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .navbar-default .nav > li > a:hover,
+        .navbar-default .nav > li > a:focus:hover {
+            color: #B0BEC5;
+        }
+        .navbar-default.affix {
+            background-color: #B0BEC5;
+            border-color: rgba(34, 34, 34, 0.05);
+        }
+        .navbar-default.affix .navbar-header .navbar-brand {
+            color: #F05F40;
+            font-size: 14px;
+        }
+        .navbar-default.affix .navbar-header .navbar-brand:hover,
+        .navbar-default.affix .navbar-header .navbar-brand:focus {
+            color: #eb3812;
+        }
+        .navbar-default.affix .nav > li > a,
+        .navbar-default.affix .nav > li > a:focus {
+            color: #222222;
+        }
+        .navbar-default.affix .nav > li > a:hover,
+        .navbar-default.affix .nav > li > a:focus:hover {
+            color: #F05F40;
+        }
+        }
         </style>
     </head>
         <body>
@@ -130,24 +133,19 @@
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                             </button>
-                            <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                            <a class="navbar-brand" href="/">Catshow</a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a class="page-scroll" href="#about">About</a>
+                                    <a href="/event">events</a>
                                 </li>
                                 <li>
-                                    <a class="page-scroll" href="#services">Services</a>
+                                    <a href="/contact">Contact</a>
                                 </li>
-                                <li>
-                                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#contact">Contact</a>
-                                </li>
+                               
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->

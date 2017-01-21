@@ -3,7 +3,8 @@
         <title>Laravel</title>
 
         <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <style>
             body {
                 margin: 0;
@@ -18,8 +19,6 @@
 
             .container {
                 text-align: center;
-                display: table-cell;
-                vertical-align: middle;
             }
 
             .content {
@@ -40,8 +39,9 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Catshow international</div>
                 <div class="quote">{{ Inspiring::quote() }}</div>
+                <div class="quote"><a class="btn btn-default" href="#" role="button">Get a ticket</a></div>
             </div>
         </div>
     </body>

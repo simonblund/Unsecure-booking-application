@@ -12,6 +12,4 @@
 */
 
 Route::get('/', 'eventController@index');
-Route::get('/event', function () {
-    return view('page');
-});
+Route::get('/event/{id}', 'eventController@show');

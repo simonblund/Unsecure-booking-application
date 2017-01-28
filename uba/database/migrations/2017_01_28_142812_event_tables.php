@@ -13,7 +13,7 @@ class EventTables extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->increments('Eid');
+            $table->increments('id');
             $table->string('EName')->nullable();
             $table->string('ELocation')->nullable();
             $table->date('EStartDate')->nullable();

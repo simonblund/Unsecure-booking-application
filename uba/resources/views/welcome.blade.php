@@ -49,15 +49,15 @@
                     <img src="https://static.pexels.com/photos/54632/cat-animal-eyes-grey-54632.jpeg" alt="cat" class="img-circle" height="120" width="120">
                 </div>
                 <div class="col-md-10">
-                <h2 class="text-left">{{$event->EName}}<small>-{{$event->ELocation}}</small></h2>
-                <p class="text-left">{{$event->EDescription}}</p>
+                <h2 class="text-left">{!!$event->EName!!}<small>-{!!$event->ELocation!!}</small></h2>
+                <p class="text-left">{!!$event->EDescription!!}</p>
                 <p class="text-left">
-                <a href="/{{$event->Eid}}"> Read more & Get tickets </a>
+                <a href="/event/{{$event->Eid}}"> Read more & Get tickets </a>
                 </p>
                 </div>
             </div>
             @endforeach
-<div class="quote">{{ Inspiring::quote() }}</div>
+        <div class="quote">{{ Inspiring::quote() }}</div>
         </div>
                 
         

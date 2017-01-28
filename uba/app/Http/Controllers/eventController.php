@@ -62,7 +62,8 @@ class eventController extends Controller
      */
     public function show($id)
     {
-        $event = App\Event::find($id);
+        $event = Event::find($id);
+        return view('parts.eventinfo', ['event' => $event]);
     }
 
     /**

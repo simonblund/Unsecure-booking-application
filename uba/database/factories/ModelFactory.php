@@ -19,3 +19,16 @@ $factory->define(App\User::class, function ($faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Event::class, function ($faker) {
+    return [
+        'EName' => $faker->name,
+        'ELocation' => $faker->state,
+        'EStartDate' => $faker->name,
+        'EStopDate' => $faker->name,
+        'EStartTime' => $faker->name,
+        'EStopDate' => $faker->name,
+        'EMaxParticipants' => 30,
+        'EDescription' => $faker->paragraph,
+    ];
+});

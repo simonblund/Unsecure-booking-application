@@ -40,9 +40,26 @@
         <div class="container">
             <div class="content">
                 <div class="title">Catshow international</div>
-                <div class="quote">{{ Inspiring::quote() }}</div>
-                <div class="quote"><a class="btn btn-default" href="/event" role="button">Get a ticket</a></div>
+                <div class="quote">Find Catshow events close to you and get tickets.</div>
             </div>
+            
+            @foreach ($events as $event)
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://static.pexels.com/photos/54632/cat-animal-eyes-grey-54632.jpeg" alt="cat" class="img-circle" height="120" width="120">
+                </div>
+                <div class="col-md-10">
+                <h2 class="text-left">{{$event->EName}}<small>-{{$event->ELocation}}</small></h2>
+                <p class="text-left">{{$event->EDescription}}</p>
+                <p class="text-left">
+                <a href="/{{$event->Eid}}"> Read more & Get tickets </a>
+                </p>
+                </div>
+            </div>
+            @endforeach
+<div class="quote">{{ Inspiring::quote() }}</div>
         </div>
+                
+        
     </body>
 </html>

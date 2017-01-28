@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Event;
 
 class eventController extends Controller
 {
@@ -16,7 +17,9 @@ class eventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+
+        return view('welcome', ['events' => $events]);
     }
 
     /**
@@ -26,7 +29,7 @@ class eventController extends Controller
      */
     public function create()
     {
-        //
+         
     }
 
     /**
@@ -37,7 +40,18 @@ class eventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $event = new Event;
+         $event->EName = $request->EName;
+         $event->ELocation = $request->ELocation;
+         $event->EStartDate = $request->EStartDate;
+         $event->EStopDate = $request->EStopDate;
+         $event->EStartTime = $request->EStartTime;
+         $event->EStopTime = $request->EStopTime;
+         $event->EMaxParticipants = $request->EMaxParticipants;
+         $event->ECountParticipants = $request->ECountParticipants;
+         $event->EDescription = $request->EDescription;
+
+         $event->save();
     }
 
     /**
@@ -48,7 +62,7 @@ class eventController extends Controller
      */
     public function show($id)
     {
-        //
+        $event = App\Event::find($id);
     }
 
     /**
@@ -82,6 +96,6 @@ class eventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        App\Event::destroy($id);
     }
 }

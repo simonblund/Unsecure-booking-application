@@ -39,6 +39,11 @@
             .quote {
                 font-size: 24px;
             }
+            .footer {
+                position: fixed;
+                padding-top: 100vh;
+                font-size: 49px;
+            }
             .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -141,7 +146,7 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a href="/event">events</a>
+                                    <a href="/">events</a>
                                 </li>
                                 <li>
                                     <a href="/contact">Contact</a>
@@ -156,11 +161,13 @@
         <header>
             
         </header>
-        <main class="container">
+        <div class="container">
             @yield('content')
-        </main>
-        <footer>
-            Cats are funny inc. All wrongs reserved.
-        </footer>
+        </div>
+        <div class="container footer">
+            <div >
+                Cats are funny inc. All wrongs reserved.
+            </div>
+        </div>
         </body>
 </html>

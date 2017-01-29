@@ -13,3 +13,4 @@
 
 Route::get('/', 'eventController@index');
 Route::get('/event/{id}', 'eventController@show');
+Route::get('/user/add', 'userController@create');

@@ -52,7 +52,7 @@
                 <h2 class="text-left">{!!$event->EName!!}<small>-{!!$event->ELocation!!}</small></h2>
                 <p class="text-left">{!!$event->EDescription!!}</p>
                 <p class="text-left">
-                <a href="/event/{{$event->Eid}}"> Read more & Get tickets </a>
+                <a href="/event/{{$event->id}}"> Read more & Get tickets </a>
                 </p>
                 </div>
             </div>

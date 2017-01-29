@@ -44,6 +44,9 @@
                 padding-top: 100vh;
                 font-size: 49px;
             }
+            .login {
+                padding-top: 1rem;
+            }
             .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -144,6 +147,21 @@
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-center">
+                                <form class="form-inline login">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Sign in</button>
+                                </form>
+                                
+                            </ul>
+                            </form>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
                                     <a href="/">events</a>

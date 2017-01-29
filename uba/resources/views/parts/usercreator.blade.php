@@ -6,7 +6,7 @@
     <h1>Create a new account <small> catlover</small></h1>
     <div class="container">
         <div class="row">
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="/user/save">
             <div class="col-md-6">
                 
                     <div class="form-group">

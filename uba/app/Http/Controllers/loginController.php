@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class userController extends Controller
+class loginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class userController extends Controller
      */
     public function create()
     {
-        return view('parts.usercreator');
+        //
     }
 
     /**
@@ -37,19 +37,7 @@ class userController extends Controller
      */
     public function store(Request $request)
     {
-        $User = new User;
-         $User->name = $request->name;
-         $User->email = $request->email;
-         $User->phone = $request->phone;
-         $User->addressStreet = $request->addressStreet;
-         $User->addressCity = $request->addressCity;
-         $User->addressCountry = $request->addressCountry;
-         $User->cardNumber = $request->cardNumber;
-         $User->CVC = $request->CVC;
-         $User->admin = $request->admin;
-         $User->password = $request->password;
-
-         $User->save();
+        //
     }
 
     /**

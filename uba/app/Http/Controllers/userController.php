@@ -37,19 +37,21 @@ class userController extends Controller
      */
     public function store(Request $request)
     {
-        $User = new User;
-         $User->name = $request->name;
-         $User->email = $request->email;
-         $User->phone = $request->phone;
-         $User->addressStreet = $request->addressStreet;
-         $User->addressCity = $request->addressCity;
-         $User->addressCountry = $request->addressCountry;
-         $User->cardNumber = $request->cardNumber;
-         $User->CVC = $request->CVC;
-         $User->admin = $request->admin;
-         $User->password = $request->password;
+         User::create([
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'phone' => $request['phone'],
+                'addressStreet' => $request['addressStreet'],
+                'addressCity' => $request['addressCity'],
+                'addressCountry' => $request['addressCountry'],
+                'cardNumber' => $request['cardNumber'],
+                'CVC' => $request['CVC'],
+                'admin' => $request['admin'],
+                'password' => $request['password']
+                ]);
+         return back();
 
-         $User->save();
+         
     }
 
     /**

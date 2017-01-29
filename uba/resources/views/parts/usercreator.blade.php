@@ -6,9 +6,9 @@
     <h1>Create a new account <small> catlover</small></h1>
     <div class="container">
         <div class="row">
-            <form class="form-horizontal" action="/user/save">
+            <form class="form-horizontal" action="{{ route('user.save') }}" method="POST">
             <div class="col-md-6">
-                
+                <input type="hidden" name="_method" value="POST">
                     <div class="form-group">
                     <label for="name" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">

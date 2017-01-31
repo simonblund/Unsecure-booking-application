@@ -16,3 +16,4 @@ Route::get('/event/{id}', 'eventController@show');
 Route::get('/user/add', 'userController@create');
 Route::post('/user/save', 'userController@store');
 Route::post('/login', 'loginController@authenticate');
+Route::get('admin/users', 'userController@index');

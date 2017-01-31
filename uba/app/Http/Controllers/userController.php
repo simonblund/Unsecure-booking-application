@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class userController extends Controller
 {
@@ -16,7 +17,8 @@ class userController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('parts.userlist', ['users' => $users]);
     }
 
     /**
@@ -37,7 +39,7 @@ class userController extends Controller
      */
     public function store(Request $request)
     {
-         User::create([
+           $us = User::create([
                 'name' => $request['name'],
                 'email' => $request['email'],
                 'phone' => $request['phone'],
@@ -45,11 +47,11 @@ class userController extends Controller
                 'addressCity' => $request['addressCity'],
                 'addressCountry' => $request['addressCountry'],
                 'cardNumber' => $request['cardNumber'],
-                'CVC' => $request['CVC'],
+                'CVC' => $request['cvc'],
                 'admin' => $request['admin'],
                 'password' => $request['password']
                 ]);
-         return back();
+         return $request->all();
 
          
     }

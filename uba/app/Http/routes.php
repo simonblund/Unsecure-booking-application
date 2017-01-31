@@ -13,7 +13,14 @@
 
 Route::get('/', 'eventController@index');
 Route::get('/event/{id}', 'eventController@show');
+Route::get('/admin/event/{id}/edit', 'eventController@edit');
+Route::patch('/admin/event/{id}', 'eventController@update');
+
 Route::get('/user/add', 'userController@create');
 Route::post('/user/save', 'userController@store');
+Route::get('/user/{id}/edit', 'userController@edit');
+Route::patch('/user/{id}', 'userController@update');
+
 Route::post('/login', 'loginController@authenticate');
+
 Route::get('admin/users', 'userController@index');

@@ -52,6 +52,7 @@ class eventController extends Controller
          $event->EDescription = $request->EDescription;
 
          $event->save();
+
     }
 
     /**
@@ -74,7 +75,8 @@ class eventController extends Controller
      */
     public function edit($id)
     {
-        //
+        $event = Event::find($id);
+        return view('parts.eventeditor', ['event' => $event]);
     }
 
     /**
@@ -86,7 +88,8 @@ class eventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $event = Event::find($id);
+        $event->update($request->all());
     }
 
     /**

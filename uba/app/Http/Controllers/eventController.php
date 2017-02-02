@@ -24,6 +24,13 @@ class eventController extends Controller
         return view('welcome', ['events' => $events]);
     }
 
+    public function adminIndex()
+    {
+        $events = Event::all();
+
+        return view('parts.eventlist', ['events' => $events]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -31,7 +38,7 @@ class eventController extends Controller
      */
     public function create()
     {
-         
+         return view('parts.eventcreator');
     }
 
     /**

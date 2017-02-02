@@ -19,6 +19,7 @@
                     <td>Admin?</td>
                 </tr>
                 @foreach($users as $user)
+                <tr>
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
@@ -28,6 +29,7 @@
                 <td>{{$user->cardNumber}}</td>
                 <td>NotFixed</td>
                 <td>{{$user->admin}}</td>
+                </tr>
                 @endforeach
             </table>
         </div>

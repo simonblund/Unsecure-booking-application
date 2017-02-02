@@ -13,11 +13,18 @@
 
 Route::get('/', 'eventController@index');
 Route::get('/event/{id}', 'eventController@show');
+
 Route::get('/admin/event/{id}/edit', 'eventController@edit');
+Route::get('/admin/events', 'eventController@adminIndex');
 Route::patch('/admin/event/{id}', 'eventController@update');
+Route::post('/admin/event/new', 'eventController@store');
+Route::get('/admin/event/create', 'eventController@create');
+
 
 Route::get('/admin/participants', 'eventController@showparticipants');
 Route::get('/event/{id}/participate/{usid}', 'eventController@addParticipant');
+
+
 
 Route::get('/user/add', 'userController@create');
 Route::post('/user/save', 'userController@store');

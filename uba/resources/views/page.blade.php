@@ -163,11 +163,12 @@
                             </ul>
                             </form>
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="bg-primary"><a href="/admin/participants">Participants</a></li>
+                                <li class="bg-primary"><a href="/admin/event/create">New event</a></li>
                                 <li class="bg-primary"><a href="/admin/events">Edit events</a></li>
+                                <li class="bg-primary"><a href="/admin/participants">Participants</a></li>
                                 <li class="bg-primary"><a href="/admin/users">Users</a></li>
                                 
-                                <li><a href="/">events</a></li>
+                                <li><a href="/">Events</a></li>
                                 <li><a href="/contact">Contact</a></li>
                                
                             </ul>

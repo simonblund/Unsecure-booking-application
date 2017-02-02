@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use App\participants;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
@@ -26,6 +27,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      */
     protected $fillable = ['name', 'email', 'password', 'phone', 'addressStreet', 'addressCity', 'adressCountry', 'admin', 'cardNumber', 'CVC'];
 
+    public function participates()
+    {
+        return $this->belongsToMany('App\Event', 'participantrecords')->withTimestamps();
+    }
     /**
      * The attributes excluded from the model's JSON form.
      *

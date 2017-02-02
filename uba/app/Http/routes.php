@@ -16,6 +16,9 @@ Route::get('/event/{id}', 'eventController@show');
 Route::get('/admin/event/{id}/edit', 'eventController@edit');
 Route::patch('/admin/event/{id}', 'eventController@update');
 
+Route::get('/admin/participants', 'eventController@showparticipants');
+Route::get('/event/{id}/participate/{usid}', 'eventController@addParticipant');
+
 Route::get('/user/add', 'userController@create');
 Route::post('/user/save', 'userController@store');
 Route::get('/user/{id}/edit', 'userController@edit');

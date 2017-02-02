@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Event;
+use App\User;
+use App\participants;
 
 class eventController extends Controller
 {
@@ -65,6 +67,26 @@ class eventController extends Controller
     {
         $event = Event::find($id);
         return view('parts.eventinfo', ['event' => $event]);
+    }
+    /*
+     * Show list of Events with participanttable. 
+     */
+    public function showparticipants()
+    {
+        
+        $event = Event::with('visitors')->get();
+        
+        //return compact('event');
+        return view('parts.participantlist', ['event' => $event]);
+    }
+    public function addParticipant($id, $usid)
+    {
+        participants::create([
+            'user_id' => $usid,
+            'event_id' => $id,
+        ]);
+        return back();
+        
     }
 
     /**

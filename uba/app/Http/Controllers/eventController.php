@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Event;
 use App\User;
 use App\participants;
+use \DB;
 
 class eventController extends Controller
 {
@@ -73,7 +74,8 @@ class eventController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
-        return view('parts.eventinfo', ['event' => $event]);
+        $particount = DB::table('participantrecords')->where('event_id', $id)->count();
+        return view('parts.eventinfo', ['event' => $event, 'particount' => $particount]);
     }
     /*
      * Show list of Events with participanttable. 
@@ -92,7 +94,9 @@ class eventController extends Controller
             'user_id' => $usid,
             'event_id' => $id,
         ]);
-        return back();
+        $user = User::find($usid);
+        $event = Event::find($id);
+        return view('parts.partisucc', ['event' => $event, 'user' => $user]);
         
     }
 

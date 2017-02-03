@@ -47,6 +47,12 @@
             .login {
                 padding-top: 1rem;
             }
+            .navbar-name{
+                color: white;
+                font-size: 2rem;
+                padding-top: 1rem;
+                padding-left: 2rem;
+            }
             .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -148,19 +154,28 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-center">
-                                <form class="form-inline login" action="/auth/login" method="POST">
-                                {!! csrf_field() !!}
-                                <input type="hidden" name="_method" value="POST">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="email">Email address</label>
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                                    </div>
-                                    <button type="submit" class="btn btn-default">Sign in</button>
-                                </form>
+                                @if (Auth::guest())
+                                     <form class="form-inline login" action="/auth/login" method="POST">
+                                            {!! csrf_field() !!}
+                                            <input type="hidden" name="_method" value="POST">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="email">Email address</label>
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="password">Password</label>
+                                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                                </div>
+                                                <button type="submit" class="btn btn-default">Sign in</button>
+                                    </form>
+                                @else
+                                        
+                                        <li class="navbar-name">{{ Auth::user()->name }}</li>
+                                        <li><a href="{{ url('auth/logout') }}">Logga ut</a></li>
+                                                
+                                        </ul>
+                                @endif
+                                
                                 
                             </ul>
                             </form>

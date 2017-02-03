@@ -49,7 +49,7 @@ class userController extends Controller
                 'cardNumber' => $request['cardNumber'],
                 'CVC' => $request['cvc'],
                 'admin' => $request['admin'],
-                'password' => $request['password']
+                'password' => bcrypt($request['password'])
                 ]);
          return $request->all();
 

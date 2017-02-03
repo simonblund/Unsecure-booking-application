@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -23,9 +23,9 @@ class loginController extends Controller
     
     public function authenticate(Request $request)
     {
-        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+        if (Auth::attempt(['email' => $request['email'], 'password' => $request['password']])) {
             // Authentication passed...
-            return redirect()->intended('event/1');
+            return redirect()->intended('/event/1');
         }
     }
 }

@@ -148,14 +148,16 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-center">
-                                <form class="form-inline login">
+                                <form class="form-inline login" action="/auth/login" method="POST">
+                                {!! csrf_field() !!}
+                                <input type="hidden" name="_method" value="POST">
                                     <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                                        <label class="sr-only" for="email">Email address</label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                                        <label class="sr-only" for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                                     </div>
                                     <button type="submit" class="btn btn-default">Sign in</button>
                                 </form>

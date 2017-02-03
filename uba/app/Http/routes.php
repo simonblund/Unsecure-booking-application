@@ -31,6 +31,8 @@ Route::post('/user/save', 'userController@store');
 Route::get('/user/{id}/edit', 'userController@edit');
 Route::patch('/user/{id}', 'userController@update');
 
-Route::post('/login', 'loginController@authenticate');
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 Route::get('admin/users', 'userController@index');

@@ -30,6 +30,7 @@ Route::get('/user/add', 'userController@create');
 Route::post('/user/save', 'userController@store');
 Route::get('/user/{id}/edit', 'userController@edit');
 Route::patch('/user/{id}', 'userController@update');
+Route::get('/admin/user/{id}/makeadmin', 'userController@makeadmin');
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

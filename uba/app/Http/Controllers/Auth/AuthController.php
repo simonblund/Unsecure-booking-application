@@ -31,7 +31,15 @@ class AuthController extends Controller
     {
         $this->middleware('guest', ['except' => 'getLogout']);
     }
-    protected $redirectPath = '/';
+    
+    protected function authenticated($request, $user)
+    {
+        if($user->admin === '1') {
+            return redirect()->intended('/admin/events');
+        }
+
+        return redirect()->intended('/');
+    }
 
 
     /**

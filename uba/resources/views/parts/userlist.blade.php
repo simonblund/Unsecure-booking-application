@@ -17,6 +17,7 @@
                     <td>CardNumber</td>
                     <td>Events</td>
                     <td>Admin?</td>
+                    <td>Make Admin</td>
                 </tr>
                 @foreach($users as $user)
                 <tr>
@@ -29,6 +30,7 @@
                 <td>{{$user->cardNumber}}</td>
                 <td>NotFixed</td>
                 <td>{{$user->admin}}</td>
+                <td><a href="/admin/user/{{$user->id}}/makeadmin">Make admin!</a></td>
                 </tr>
                 @endforeach
             </table>

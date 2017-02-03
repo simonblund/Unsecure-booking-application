@@ -231,7 +231,7 @@
                                 <li class="bg-primary"><a href="/admin/users">Users</a></li>
                     @endif
                                 <li><a href="/">Events</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                                
                                
                             </ul>
                         </div>

@@ -79,6 +79,12 @@ class userController extends Controller
         return view('parts.usereditor', ['user' => $user]);
     }
 
+    public function makeadmin($id)
+    {
+        User::find($id)->update(['admin'=>true]);
+        return back();
+    }
+
     /**
      * Update the specified resource in storage.
      *

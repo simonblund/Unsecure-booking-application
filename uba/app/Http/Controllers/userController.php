@@ -21,6 +21,11 @@ class userController extends Controller
         return view('parts.userlist', ['users' => $users]);
     }
 
+    public function key()
+    {
+        $key = env('APP_KEY');
+        return $key;
+    }
     /**
      * Show the form for creating a new resource.
      *

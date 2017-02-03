@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <form class="form-horizontal" action="/admin/event/new" method="POST">
-            <input type="hidden" name="_method" value="PATCH">
+            <input type="hidden" name="_method" value="POST">
             <div class="col-md-6">
                 
                     <div class="form-group">

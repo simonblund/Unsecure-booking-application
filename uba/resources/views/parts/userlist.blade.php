@@ -15,6 +15,7 @@
                     <td>City</td>
                     <td>Country</td>
                     <td>CardNumber</td>
+                    <td>CVC</td>
                     <td>Events</td>
                     <td>Admin?</td>
                     <td>Make Admin</td>
@@ -28,14 +29,15 @@
                 <td>{{$user->addressCity}}</td>
                 <td>{{$user->addressCountry}}</td>
                 <td>{{$user->cardNumber}}</td>
+                <td>{{$user->cvc}}</td>
                 <td>NotFixed</td>
                 <td>{{$user->admin}}</td>
                 <td><a href="/admin/user/{{$user->id}}/makeadmin">Make admin!</a></td>
                 </tr>
                 @endforeach
             </table>
-        </div>
 
+        </div>
     </div>
     
 @endsection

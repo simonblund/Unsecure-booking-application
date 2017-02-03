@@ -122,7 +122,7 @@ class eventController extends Controller
     public function update(Request $request, $id)
     {
         $event = Event::find($id);
-        $event->update($request->all());
+        //$event->update($request->all());
     }
 
     /**

@@ -30,9 +30,9 @@ This is an application for the cyber security base course. Do Not Use.
 This is an laravel 5.1 application, see intructions on laravel.com.
 
 ## Requirements
-PHP >= 5.6.4
-OpenSSL PHP Extension
-PDO PHP Extension
-Mbstring PHP Extension
-Tokenizer PHP Extension
-XML PHP Extension
+- PHP >= 5.6.4
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
